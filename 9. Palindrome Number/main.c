@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/30 11:45:11 by mvan-pee          #+#    #+#             */
-/*   Updated: 2024/01/30 11:58:42 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2024/01/31 15:04:56 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,14 @@ static char	*ft_itoa(int n)
 		return (NULL);
 	nbr[i--] = '\0';
 	if (n == 0)
-	{
 		nbr[0] = '0';
-	}
 	if (n < 0)
 	{
 		nbr[0] = '-';
-		n = -n;
+		number *= n;
 	}
-	number = n;
+	else
+		number = n;
 	ft_int_to_char(number, nbr, i);
 	return (nbr);
 }
